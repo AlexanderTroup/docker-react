@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t alexandertroup/docker-react -f Dockerfile.dev .
+  - docker build -t alexandertroup/docker-react -f frontend/Dockerfile.dev ./frontend
 
 script:
   - docker run -e CI=true alexandertroup/docker-react npm run test
